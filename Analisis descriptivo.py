@@ -15,19 +15,27 @@ data.length.hist(bins=50)
 #-Numero de photos por business -----------------------------------------------#
 Num_by_Bss = data[["business_id"]].groupby("business_id").size()
 pd.crosstab(Num_by_Bss, columns='count').plot.bar()
-#- Seleccionamos negocios y seleccionamos numero de revisiones ----------------#
-NRw = pd.crosstab(df_business.review_count[df_business.review_count > 50],columns='count')
-NRw[:100].plot.bar()
-data_business = df_business[["business_id","stars"]][df_business.review_count > 50]
-pd.crosstab(data_business.stars, columns='count').plot.bar()
-#- Cruzamos data de fotos con la data de estrellas ----------------------------#
-data_photo = pd.merge(data_photo,data_business,on='business_id',how='left')
-data_photo = data_photo[data_photo.stars.notnull()]
-#- Analisis de la longitud de texto por estrellas
-pd.crosstab(data_photo.stars, columns='count').plot.bar()
-data_photo.length[data_photo.length != 0][data_photo.stars == 3.0].hist(bins=50)
-data_photo[["stars","length"]][data_photo.length != 0].groupby("stars").describe().reset_index()
+#- Analisis de la longitud de texto por estrellas -----------------------------#
+pd.crosstab(data.stars, columns='count').plot.bar()
+sns.boxplot(x='stars', y='length', data=data)
+data[["stars","length"]].groupby("stars").describe().reset_index()
+#- Calculo de sentimientos y filtro por opiniones objetivas -------------------#
+from textblob import TextBlob
+import re
+regex = re.compile('[^A-Za-z0-9 ^. , ^: ^; ^? ^¿ ^¡ ^!]')
+def texCC(x): regex.sub(' ',str(x))
+data_photo.caption = data.caption.map(texCC)
+# Analisis de sentimientos
+def Tf(x):
+    val = TextBlob(str(x)).sentiment.subjectivity
+    return val
+def TfP(x):
+    val = TextBlob(str(x)).sentiment.polarity
+    return val
+data = data.assign(subjectivity =data.caption.map(Tf)) # Tomamos comentarios subjetivos
+data[data.subjectivity != 0].subjectivity.hist(bins=20)
+sns.boxplot(x='stars', y='subjectivity', data=data[data.subjectivity != 0])
 
-data_photo.caption[data_photo.length != 0][data_photo.stars == 1.0][:1]
-ff = data_photo[data_photo.length > 3]
-pd.crosstab(ff.stars, columns='count').plot.bar()
+data = data.assign(polarity =data.caption.map(TfP)) # Polaridad de las opiniones
+data[data.subjectivity > 0.3].polarity.hist(bins=20)
+sns.boxplot(x='stars', y='polarity', data=data[data.subjectivity > 0.3])
