@@ -21,8 +21,12 @@ data_business = df_business[["business_id","stars"]][df_business.review_count > 
 data_photo = pd.merge(data_photo,data_business,on='business_id',how='left')
 data_photo = data_photo[data_photo.stars.notnull()]
 data_photo = data_photo[data_photo.length > 3]
-pd.crosstab(ff.stars, columns='count').plot.bar()
+#Num_by_Bss = data_photo[["business_id"]].groupby("business_id").size()
+#Num_by_Bss = Num_by_Bss[Num_by_Bss > 10]
+#data_photo = data_photo[data_photo.business_id.isin(Num_by_Bss.index.values)]
+#- Eliminar caracteres extraños en los textos ---------------------------------#
+def removeT(s): return s.replace('|', '')
+data_photo.caption = data_photo.caption.map(removeT)
 # Trasformamos toda la informacion a formato csv para trabajar luego -----------#
 csv_datos_finales = "datos_finales.csv"
-data_photo.to_csv(csv_datos_finales , index=False,sep=">")
-
+data_photo.to_csv(csv_datos_finales , index=False,sep="|")

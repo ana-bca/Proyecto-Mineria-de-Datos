@@ -7,13 +7,13 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 # Lectura de los datos --------------------------------------------------------#
-data = pd.read_csv("datos_finales.csv",)
+data = pd.read_csv('datos_finales.csv', engine='python',sep="|")
 #==============================================================================#
 #=========================== ANALISIS DE PHOTOS ===============================#
 #-Longitud de los comnetarios en la photo--------------------------------------#
-data_photo.length[data_photo.length != 0].hist(bins=50)
+data.length.hist(bins=50)
 #-Numero de photos por business -----------------------------------------------#
-Num_by_Bss = data_photo[["business_id"]].groupby("business_id").size()
+Num_by_Bss = data[["business_id"]].groupby("business_id").size()
 pd.crosstab(Num_by_Bss, columns='count').plot.bar()
 #- Seleccionamos negocios y seleccionamos numero de revisiones ----------------#
 NRw = pd.crosstab(df_business.review_count[df_business.review_count > 50],columns='count')
