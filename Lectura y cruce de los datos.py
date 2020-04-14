@@ -24,5 +24,5 @@ data_photo = data_photo[data_photo.length > 3]
 pd.crosstab(ff.stars, columns='count').plot.bar()
 # Trasformamos toda la informacion a formato csv para trabajar luego -----------#
 csv_datos_finales = "datos_finales.csv"
-data_photo.to_csv(csv_datos_finales , index=False)
+data_photo.to_csv(csv_datos_finales , index=False,sep=">")
 

@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 # Lectura de los datos --------------------------------------------------------#
-data = pd.read_csv("yelp_photos.csv")
+data = pd.read_csv("datos_finales.csv",)
 #==============================================================================#
 #=========================== ANALISIS DE PHOTOS ===============================#
 #-Longitud de los comnetarios en la photo--------------------------------------#
