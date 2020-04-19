@@ -22,6 +22,8 @@ data_F = data.assign(caption = data.caption.map(lambda p: texCC(p, regex)))
 def LENW(x):return len(tknzr.tokenize(str(x)))
 data_F = data_F.assign(len_word = data_F.caption.map(LENW))
 pd.crosstab(data_F.len_word, columns='count').plot.bar()
+plt.title("Cantidad de palabras por comentario")
+plt.show()
 # Analisis de n-gramas (frecuencias de una palabra) ---------------------------#
 regex2 = re.compile('[^A-Za-z0-9]')
 data_F2 = data.assign(caption = data.caption.map(lambda p: texCC(p, regex2)))
