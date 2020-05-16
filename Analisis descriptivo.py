@@ -38,9 +38,11 @@ def Table_NGRAM(data,n):
     table_n.columns = ['Count']
     table_n = table_n.sort_values('Count', ascending = False)
     return table_n
+table_n1[table_n1.Count < 100].hist(bins = 100)
 
 table_n1 = Table_NGRAM(data,1)
-table_n1[:60].plot.barh()
+
+table_n1[table_n1.Count < 10][:30].plot.barh()
 
 table_n2 = Table_NGRAM(data,2)
 table_n2[:60].plot.barh()
