@@ -10,6 +10,7 @@ from nltk import word_tokenize
 from nltk.util import ngrams
 from wordcloud import WordCloud
 from nltk.probability import FreqDist
+from nltk.tokenize import TweetTokenizer
 tknzr = TweetTokenizer()
 # Lectura de los datos --------------------------------------------------------#
 data = pd.read_csv('datos_finales.csv', engine='python',sep="|")
