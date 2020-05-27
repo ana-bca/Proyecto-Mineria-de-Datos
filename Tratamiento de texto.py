@@ -37,6 +37,10 @@ def SingTex(x):
 # Eliminar palabras segun diccionario
 Dic1 = pd.read_csv('palabras1.csv', engine='python',sep=",")
 Dic1 = np.array(Dic1[Dic1.Ind.isnull()].word)
+
+Dic2 = pd.read_csv('palabras2.csv', engine='python',sep="\t")
+Dic2 = np.array(Dic2[Dic2.Ind.isnull()].word)
+
 def texClean3(x,DIC):
     x = str(x)
     querywords = x.split()
@@ -52,6 +56,7 @@ def TratTex(x):
     text = texClean2(text)
     text = SingTex(text)
     text = texClean3(text,Dic1)
+    text = texClean3(text,Dic2)
     return text
 # Lectura de los datos --------------------------------------------------------#
 data = pd.read_csv('datos_finales.csv', engine='python',sep="|")
