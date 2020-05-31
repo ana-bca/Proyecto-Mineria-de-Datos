@@ -41,10 +41,21 @@ Dic1 = np.array(Dic1[Dic1.Ind.isnull()].word)
 Dic2 = pd.read_csv('palabras2.csv', engine='python',sep="\t")
 Dic2 = np.array(Dic2[Dic2.Ind.isnull()].word)
 
+Dic3 = pd.read_csv('palabras3.csv', engine='python',sep="\t")
+Dic3 = np.array(Dic3)
+Dic3 = Dic3.reshape(Dic3.shape[0],)
+
+DicF = np.append(np.append(Dic1,Dic2),Dic3)
+
 def texClean3(x,DIC):
     x = str(x)
     querywords = x.split()
     resultwords  = [word for word in querywords if word.lower() not in DIC]
+    result = ' '.join(resultwords)
+    return result
+def texClean4(x):
+    x = str(x)
+    resultwords = list(dict.fromkeys(x.split()))
     result = ' '.join(resultwords)
     return result
 # longitud de un texto
@@ -55,8 +66,8 @@ def TratTex(x):
     text = texClean1(text,regex)
     text = texClean2(text)
     text = SingTex(text)
-    text = texClean3(text,Dic1)
-    text = texClean3(text,Dic2)
+    text = texClean3(text,DicF)
+    text = texClean4(text)
     return text
 # Lectura de los datos --------------------------------------------------------#
 data = pd.read_csv('datos_finales.csv', engine='python',sep="|")
@@ -64,10 +75,10 @@ data = pd.read_csv('datos_finales.csv', engine='python',sep="|")
 data_F = data.assign(caption = data.caption.map(lambda p: TratTex(p)))
 # Eliminacion de Textos sin contenido -----------------------------------------#
 data_F = data_F.assign(len_word = data_F.caption.map(LENW))
+data_F = data_F[data_F.len_word != 0]
 pd.crosstab(data_F.len_word, columns='count').plot.bar()
 plt.title("Cantidad de palabras por comentario")
 plt.show()
-data_F = data_F[data_F.len_word != 0]
 #Creaccion de diccionario de palabras------------------------------------------#
 def NGRAM(x,n):
     token=nltk.word_tokenize(str(x))
@@ -92,8 +103,20 @@ table_n3[:30].plot.barh()
 #==============================================================================#
 table_n1  = table_n1.assign(word = table_n1.index.map(lambda p: np.array(p)))
 table_n1.word = [val for sublist in table_n1.word for val in sublist]
+DIC3 = np.array(table_n1.word[table_n1.Count < 4])
+csv_datos_finales = "palabras3.csv"
+pd.DataFrame(DIC3).to_csv(csv_datos_finales, index=False,sep="|")
 # Exportar listas de palabras para evaluar diccionarios -----------------------#
 csv_datos_finales = "palabras2.csv"
 csv_datos_finales = "palabras1.csv"
 table_n1[:7000][:].to_csv(csv_datos_finales , index=False,sep="|")
 table_n1[6999:][:].to_csv(csv_datos_finales , index=False,sep="|")
+
+
+
+
+
+mylist = ["a", "b", "a", "c", "c"]
+mylist = list(dict.fromkeys(mylist))
+print(mylist)
+

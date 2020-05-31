@@ -38,7 +38,7 @@ Count,word,Ind
 554,red,1
 548,lobster,1
 548,soup,1
-539,green,1
+539,green, 
 536,sushi,1
 531,special,1
 529,roasted,1
@@ -119,7 +119,7 @@ Count,word,Ind
 275,ribs,1
 273,chili,1
 272,tofu,1
-271,like,1
+271,like, 
 269,noodle,1
 268,cheesecake,1
 268,honey,1
@@ -139,7 +139,7 @@ Count,word,Ind
 233,truffle,1
 231,beans,1
 231,flavor,1
-228,day,1
+228,day, 
 228,mushrooms,1
 225,big,1
 224,de,
