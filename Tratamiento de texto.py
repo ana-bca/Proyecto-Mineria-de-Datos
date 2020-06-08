@@ -94,6 +94,10 @@ def Table_NGRAM(data,n):
 # n-gramss n = 1 ..............................................................#
 table_n1 = Table_NGRAM(data_F,1)
 table_n1[:40].plot.barh()
+table_n1  = table_n1.assign(word = table_n1.index.map(lambda p: np.array(p)))
+table_n1.word = [val for sublist in table_n1.word for val in sublist]
+csv_name = "palabras_finales.csv"
+table_n1.to_csv(csv_name, index=False,sep="|")
 # n-gramss n = 1 ..............................................................#
 table_n2 = Table_NGRAM(data_F,2)
 table_n2[:40].plot.barh()
@@ -111,12 +115,4 @@ csv_datos_finales = "palabras2.csv"
 csv_datos_finales = "palabras1.csv"
 table_n1[:7000][:].to_csv(csv_datos_finales , index=False,sep="|")
 table_n1[6999:][:].to_csv(csv_datos_finales , index=False,sep="|")
-
-
-
-
-
-mylist = ["a", "b", "a", "c", "c"]
-mylist = list(dict.fromkeys(mylist))
-print(mylist)
 
