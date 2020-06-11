@@ -47,7 +47,7 @@ model.compile(loss='binary_crossentropy',
 model.summary()
 
 history = model.fit(X_train, y_train,
-                    epochs=50,
+                    epochs=10,
                     verbose=1,
                     validation_split=0.1,
                     shuffle=False,
@@ -74,8 +74,7 @@ X_bigrams  = vectorizer.transform(table_n2.word.values)
 X_bigrams  = tokenizer.texts_to_sequences(table_n2.word.values)
 
 y_pred = model.predict(X_bigrams)
-compuestas  = pd.DataFrame(data = {'word':table_n2.word.values
+compuestas  = pd.DataFrame(data = {'word':table_n2.word.values,
                                    'pred':y_pred.reshape(y_pred.shape[0],)})
-
 
 
