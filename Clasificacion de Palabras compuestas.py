@@ -12,28 +12,28 @@ from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 from keras.models import Sequential
 from keras import layers
+from sklearn.utils import shuffle
 #======================== Clasificador de bigramas ===========================#
 vocabul = pd.read_csv('palabras_finales.csv', engine='python',sep="|")
 # Vectores en los bigramas
 data = pd.read_csv('palabrascompu2.csv',sep=",")
-data_v = data[data.index<50]
-data = data[data.index >= 50]
-
-
+data = shuffle(data)
+data_v = data[data.index< int(data.shape[0]*0.10)]
+data = data[data.index >= int(data.shape[0]*0.10)]
 sentences = data['compuesta'].values
 y = data['Clase'].values
-
-vectorizer = CountVectorizer()
-vectorizer.fit(sentences)
-X = vectorizer.transform(sentences)
 
 tokenizer = Tokenizer(num_words= table_n1.shape[0])
 tokenizer.fit_on_texts(sentences)
 X = tokenizer.texts_to_sequences(sentences)
 X = pad_sequences(X, padding='post', maxlen=2)
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, 
-                                                    random_state=1000)
+X_exit = tokenizer.texts_to_sequences(data_v.compuesta.values)
+X_exit = pad_sequences(X_exit, padding='post', maxlen=2)
+y_exit = data_v['Clase'].values
+
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1,random_state=1000)
 
 
 input_dim = X_train.shape[1]  # Number of features
@@ -58,23 +58,18 @@ loss, accuracy = model.evaluate(X_train, y_train, verbose=False)
 print("Training Accuracy: {:.4f}".format(accuracy))
 loss, accuracy = model.evaluate(X_test, y_test, verbose=False)
 print("Testing Accuracy:  {:.4f}".format(accuracy))
+loss, accuracy = model.evaluate(X_exit,y_exit, verbose=False)
+print("Exit Accuracy:  {:.4f}".format(accuracy))
 
-plt.plot(history.history['loss'], label='train')
-plt.plot(history.history['val_loss'], label='test')
-plt.legend()
-
+fig, axs = plt.subplots(1, 2)
+axs[0].plot(history.history['loss'], label='train')
+axs[0].plot(history.history['val_loss'], label='test')
+axs[0].set_title('Loss')
+axs[0].legend()
+axs[1].plot(history.history['accuracy'], label='train')
+axs[1].plot(history.history['val_accuracy'], label='test')
+axs[1].set_title('Accuracy')
+axs[1].legend()
 # Predicciones----------------------------------------------------------------#
-y_pred = model.predict(X_test)
-pd.DataFrame(data = {'pred':y_pred.reshape(100,),'test':y_test})
-
-
-table_n2  = table_n2.assign(word = table_n2.index.map(lambda p: np.array(p)))
-table_n2  = table_n2.assign(word = table_n2.index.map(lambda p: ' '.join(p)))
-X_bigrams  = vectorizer.transform(table_n2.word.values)
-X_bigrams  = tokenizer.texts_to_sequences(table_n2.word.values)
-
-y_pred = model.predict(X_bigrams)
-compuestas  = pd.DataFrame(data = {'word':table_n2.word.values,
-                                   'pred':y_pred.reshape(y_pred.shape[0],)})
 
 
