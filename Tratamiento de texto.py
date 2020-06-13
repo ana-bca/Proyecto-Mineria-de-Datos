@@ -101,6 +101,14 @@ table_n1.to_csv(csv_name, index=False,sep="|")
 # n-gramss n = 1 ..............................................................#
 table_n2 = Table_NGRAM(data_F,2)
 table_n2[:40].plot.barh()
+palabra1 = np.array(table_n2.index.map(lambda p: p[0]))
+palabra2 = np.array(table_n2.index.map(lambda p: p[1]))
+compuesta = np.array(table_n2.index.map(lambda p: ' '.join(np.array(p))))
+palabrascompu = pd.DataFrame({'palabra1':palabra1,'palabra2':palabra2,
+                              'compuesta':compuesta,
+                              'Clase':np.zeros(palabra1.shape[0],dtype= int)})
+csv_datos_finales = "palabrascompu.csv"
+palabrascompu.to_csv(csv_datos_finales, index=False,sep=",")
 # n-gramss n = 1 ..............................................................#
 table_n3 = Table_NGRAM(data_F,3)
 table_n3[:30].plot.barh()
