@@ -16,14 +16,15 @@ from sklearn.utils import shuffle
 #======================== Clasificador de bigramas ===========================#
 vocabul = pd.read_csv('palabras_finales.csv', engine='python',sep="|")
 # Vectores en los bigramas
-data = pd.read_csv('palabrascompu2.csv',sep=",")
-data = shuffle(data)
-data_v = data[data.index< int(data.shape[0]*0.10)]
-data = data[data.index >= int(data.shape[0]*0.10)]
+#data = pd.read_csv('palabrascompu2.csv',sep=",")
+data = pd.read_csv('prueba1.csv',sep=";")
+data_A = shuffle(data)
+data_v = data[data_A.index< int(data_A.shape[0]*0.10)]
+data = data_A[data_A.index >= int(data_A.shape[0]*0.10)]
 sentences = data['compuesta'].values
 y = data['Clase'].values
 
-tokenizer = Tokenizer(num_words= table_n1.shape[0])
+tokenizer = Tokenizer(num_words= vocabul.shape[0])
 tokenizer.fit_on_texts(sentences)
 X = tokenizer.texts_to_sequences(sentences)
 X = pad_sequences(X, padding='post', maxlen=2)
@@ -71,5 +72,16 @@ axs[1].plot(history.history['val_accuracy'], label='test')
 axs[1].set_title('Accuracy')
 axs[1].legend()
 # Predicciones----------------------------------------------------------------#
+data_C = pd.read_csv('palabrascompu.csv',sep=",")
+data_C = data_A.append(data_C)
+data_C.drop_duplicates(subset ="compuesta", keep = False, inplace = True) 
+data_C = data_C.sample(500)
 
-
+y_C = data_C['Clase'].values
+X_C = tokenizer.texts_to_sequences(data_C.compuesta.values)
+X_C = pad_sequences(X_C, padding='post', maxlen=2)
+y_pred = model.predict(X_C)
+data_C['Clase'] = np.round(y_pred +0.05).astype(int)
+data_C['Clase'].sum()
+csv_datos_finales = "data_C.csv"
+data_C.to_csv(csv_datos_finales, index=False,sep=",")
