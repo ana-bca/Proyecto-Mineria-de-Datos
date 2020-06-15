@@ -16,8 +16,8 @@ from sklearn.utils import shuffle
 #======================== Clasificador de bigramas ===========================#
 vocabul = pd.read_csv('palabras_finales.csv', engine='python',sep="|")
 # Vectores en los bigramas
-#data = pd.read_csv('palabrascompu2.csv',sep=",")
-data = pd.read_csv('prueba1.csv',sep=";")
+data = pd.read_csv('palabrascompu2.csv',sep=",")
+data = pd.read_csv('prueba1.csv',sep=",")
 data_A = shuffle(data)
 data_v = data[data_A.index< int(data_A.shape[0]*0.10)]
 data = data_A[data_A.index >= int(data_A.shape[0]*0.10)]
@@ -48,7 +48,7 @@ model.compile(loss='binary_crossentropy',
 model.summary()
 
 history = model.fit(X_train, y_train,
-                    epochs=10,
+                    epochs=7,
                     verbose=1,
                     validation_split=0.1,
                     shuffle=False,
@@ -81,7 +81,7 @@ y_C = data_C['Clase'].values
 X_C = tokenizer.texts_to_sequences(data_C.compuesta.values)
 X_C = pad_sequences(X_C, padding='post', maxlen=2)
 y_pred = model.predict(X_C)
-data_C['Clase'] = np.round(y_pred +0.05).astype(int)
+data_C['Clase'] = np.round(y_pred).astype(int)
 data_C['Clase'].sum()
 csv_datos_finales = "data_C.csv"
 data_C.to_csv(csv_datos_finales, index=False,sep=",")

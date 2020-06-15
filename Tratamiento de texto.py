@@ -76,6 +76,8 @@ data_F = data.assign(caption = data.caption.map(lambda p: TratTex(p)))
 # Eliminacion de Textos sin contenido -----------------------------------------#
 data_F = data_F.assign(len_word = data_F.caption.map(LENW))
 data_F = data_F[data_F.len_word != 0]
+csv_datos_finales = "data_F.csv"
+data_F.to_csv(csv_datos_finales , index=False,sep=",")
 pd.crosstab(data_F.len_word, columns='count').plot.bar()
 plt.title("Cantidad de palabras por comentario")
 plt.show()
