@@ -1,984 +1,313 @@
-Count|word
-3315|chicken
-1636|salad
-1451|cheese
-1377|roll
-1345|pork
-1324|fried
-1208|beef
-1127|shrimp
-1103|chocolate
-1069|cream
-1028|rice
-1005|egg
-943|fry
-936|cake
-893|sauce
-892|burger
-875|salmon
-873|spicy
-847|sandwich
-782|taco
-774|deliciou
-732|grilled
-711|pizza
-675|ice
-659|potato
-644|steak
-613|bowl
-608|fresh
-589|bread
-572|crab
-560|sweet
-560|bacon
-546|rib
-538|special
-529|breakfast
-529|soup
-523|garlic
-522|noodle
-514|lobster
-514|strawberry
-504|crispy
-502|sushi
-488|toast
-484|mushroom
-481|fish
-475|hot
-467|butter
-466|waffle
-464|dessert
-452|tuna
-450|plate
-439|chip
-430|red
-428|food
-424|onion
-416|pancake
-403|wing
-396|roasted
-395|tomato
-382|avocado
-380|french
-377|bbq
-373|black
-367|meat
-351|bean
-346|thai
-345|banana
-345|sausage
-345|meal
-341|lunch
-341|belly
-332|scallop
-331|cookie
-330|tea
-328|yummy
-325|white
-324|curry
-321|lamb
-321|pastum
-313|house
-312|duck
-311|pie
-310|smoked
-302|combo
-298|platter
-294|seafood
-292|mango
-292|pepper
-287|nacho
-284|vanilla
-283|coconut
-281|dinner
-279|baked
-278|flavor
-276|crepe
-275|extra
-272|corn
-270|sashimi
-266|style
-264|apple
-263|caramel
-263|raman
-258|cheesecake
-258|bun
-254|dish
-253|lemon
-250|truffle
-247|tofu
-247|love
-245|brunch
-243|vegan
-239|burrito
-235|chili
-234|appetizer
-234|almond
-231|order
-229|honey
-226|donut
-220|soft
-220|big
-214|wrap
-212|tempura
-209|matcha
-209|dumpling
-207|croissant
-207|double
-206|pad
-203|classic
-202|bone
-201|veggie
-199|endoedible
-198|half
-197|coffee
-196|turkey
-196|happy
-194|meatball
-191|brown
-189|fruit
-189|vegetable
-188|benedict
-187|free
-185|cinnamon
-184|brisket
-180|milk
-180|served
-179|box
-177|short
-177|small
-176|sesame
-176|spinach
-176|calamari
-174|peanut
-174|tasty
-174|cupcake
-171|chef
-171|sea
-170|cheeseburger
-169|nutella
-168|filet
-168|little
-168|pulled
-167|blueberry
-165|raspberry
-164|mini
-163|tart
-159|octopus
-158|vega
-157|miso
-157|hash
-155|seared
-154|bite
-154|cooky
-151|hummu
-151|stuffed
-150|buttermilk
-149|super
-148|poke
-148|perfect
-147|berry
-147|poutine
-147|dog
-145|chop
-144|asada
-144|carrot
-143|pudding
-139|steamed
-139|parmesan
-138|piece
-138|pan
-138|orange
-138|italian
-137|braised
-137|kimchi
-137|ribeye
-136|nigiri
-136|biscuit
-134|brownie
-134|side
-134|grill
-134|basil
-134|large
-132|topped
-132|cheddar
-132|homemade
-131|katsu
-130|carne
-129|blue
-128|clam
-128|latte
-126|salt
-126|pesto
-125|mozzarella
-125|pistachio
-124|macaron
-124|oil
-123|brussel
-123|ball
-122|korean
-122|spice
-121|beer
-120|japanese
-119|spaghetti
-118|greek
-118|tiramisu
-117|mexican
-117|cold
-117|cauliflower
-116|chorizo
-115|doughnut
-114|vegetarian
-114|tartare
-113|mixed
-113|oreo
-113|teriyaki
-113|dragon
-113|lime
-112|sugar
-111|salsa
-110|salted
-110|pastry
-110|sticky
-109|pineapple
-109|asparagu
-108|pumpkin
-107|sour
-106|gelato
-106|mousse
-106|leg
-104|crunch
-104|dry
-103|portion
-103|walnut
-103|creamy
-103|takoyaki
-101|cooked
-101|skewer
-101|maple
-100|bagel
-100|scrambled
-100|kale
-100|drink
-99|goat
-99|risotto
-99|pecan
-99|pink
-99|churro
-98|complimentary
-98|ricottum
-97|californium
-97|cocktail
-96|breast
-95|topping
-95|table
-94|mediterranean
-94|huge
-94|bruschettum
-93|fire
-92|ham
-92|cucumber
-92|prosciutto
-91|snow
-90|toasted
-90|chinese
-90|warm
-90|juicy
-90|muffin
-90|sundae
-90|pepperoni
-89|sunday
-89|quesadilla
-88|street
-88|olive
-88|chile
-88|strip
-88|soy
-88|cherry
-88|bulgogi
-87|guacamole
-87|caesar
-87|mignon
-87|shawarma
-87|herb
-87|wine
-86|board
-86|cup
-85|nut
-85|slouse
-85|ginger
-84|slaw
-84|traditional
-84|wrapped
-84|home
-83|marinated
-83|famou
-82|ordered
-82|beet
-82|custard
-82|caviar
-82|cone
-82|peach
-81|filling
-81|lettuce
-81|aioli
-81|chipotle
-80|medium
-80|pickle
-80|roast
-79|mochi
-79|dark
-79|seasonal
-78|hazelnut
-77|poached
-76|bento
-76|cannoli
-76|cod
-76|gnocchi
-76|pitum
-76|omelette
-76|snack
-76|pretzel
-75|hamachi
-75|mashed
-75|sampler
-75|creme
-75|pear
-75|falafel
-75|trio
-75|gyoza
-75|gravy
-75|asian
-74|glazed
-74|pickled
-74|brioche
-74|gluten
-73|set
-73|syrup
-72|ceviche
-72|rainbow
-72|tail
-72|treat
-71|sliced
-71|craftkitchen
-70|yogurt
-70|ravioli
-70|carpaccio
-70|cajun
-69|bao
-69|monster
-68|popcorn
-67|wonton
-67|pea
-67|quinoa
-67|old
-67|jalapeno
-66|tre
-66|dressing
-65|crisp
-65|sorbet
-65|golden
-65|chow
-65|enchilada
-64|cabbage
-64|crust
-64|caramelized
-64|hawaiian
-64|masala
-64|entree
-64|karaage
-63|arugula
-63|combination
-62|lasagna
-62|toro
-62|filled
-62|dough
-62|pollo
-62|caprese
-61|seasoning
-61|scone
-61|charcuterie
-61|squash
-60|banh
-60|carbonara
-60|jam
-60|seaweed
-60|artichoke
-59|queso
-59|marrow
-59|veal
-59|aged
-59|citru
-59|buffet
-58|crunchy
-58|deviled
-58|artisan
-58|balsamic
-58|quarter
-58|glaze
-58|cheesy
-58|bibimbap
-58|ranch
-58|jelly
-57|charred
-57|chopped
-57|broth
-57|rock
-57|tortilla
-57|unagi
-57|omelet
-57|pastor
-57|pig
-57|stone
-57|yuzu
-56|frosting
-55|mix
-55|mustard
-55|alfredo
-55|yellow
-54|margheritum
-54|flatbread
-54|lech
-54|rose
-53|garden
-53|vinaigrette
-53|purple
-53|friend
-53|confit
-53|maki
-52|rosemary
-52|ye
-52|kabob
-52|fritter
-52|wasabi
-51|more
-51|raw
-51|toffee
-51|salty
-51|char
-51|chive
-51|trout
-51|meringue
-51|flavorful
-50|crusted
-50|date
-50|basket
-50|zucchini
-50|ground
-50|pounder
-49|oxtail
-49|macaroon
-49|burnt
-49|steakhouse
-49|spiced
-49|stew
-49|paella
-48|curd
-48|bolognese
-48|tikka
-47|fat
-47|seed
-47|halibut
-47|blend
-47|cilantro
-47|watermelon
-47|fetum
-47|fatty
-46|pastrami
-46|angu
-46|papaya
-46|split
-46|kalbi
-46|tray
-46|candied
-46|cornbread
-46|espresso
-45|panini
-44|parsley
-44|tenderloin
-44|kebab
-44|stick
-44|sauteed
-44|omakase
-44|tonkotsu
-43|heart
-43|candy
-43|macaroni
-43|angel
-43|rigatoni
-43|juice
-43|marinara
-43|lentil
-43|sirloin
-43|tostada
-42|scallion
-42|burratum
-42|came
-42|rolled
-42|organic
-42|shredded
-42|pop
-42|smoothie
-42|edamame
-42|marshmallow
-41|belgian
-41|cranberry
-41|vermicelli
-41|olife
-41|flavour
-41|cute
-41|snapper
-40|swiss
-40|crawfish
-40|fondue
-40|bakery
-40|boat
-39|vietnamese
-39|drunken
-39|coleslaw
-39|zesty
-39|relleno
-39|satay
-39|frozen
-39|flan
-39|torched
-39|crumble
-38|empanada
-38|thick
-38|water
-38|closeup
-38|shank
-38|serving
-38|ponzu
-37|bourbon
-37|roe
-37|peking
-37|minced
-37|protein
-37|fennel
-37|verde
-37|tiger
-37|iced
-37|turf
-36|dipping
-36|elote
-36|chirashi
-35|shot
-35|cheek
-35|raisin
-35|escargot
-35|oatmeal
-35|tonkatsu
-35|shoyu
-35|monkey
-35|taiyaki
-35|housemade
-35|assortment
-35|puree
-34|chowder
-34|paneer
-34|fudge
-34|crostini
-34|spider
-34|soba
-34|buttery
-34|mole
-34|cracker
-34|tataki
-34|pound
-34|fajita
-33|slice
-33|brew
-33|foodie
-33|brie
-33|tongue
-33|leche
-33|quail
-33|albacore
-33|volcano
-33|banchan
-33|dipped
-32|atlantic
-32|dried
-32|yakitori
-32|mocha
-32|shortcake
-32|danish
-32|mascarpone
-32|linguini
-32|corned
-31|polentum
-31|moco
-31|stuff
-31|lotu
-31|bird
-31|baguette
-31|radish
-31|southern
-31|bisque
-31|fruity
-31|sourdough
-31|grass
-30|wheat
-30|milkshake
-30|american
-30|sicilian
-30|penne
-30|passion
-30|blackberry
-30|phoenix
-30|scampi
-30|cheesesteak
-30|wellington
-29|poblano
-29|sriracha
-29|plu
-29|szechuan
-29|thanksgiving
-29|share
-29|lemonade
-29|infused
-29|cowboy
-29|spot
-29|mackerel
-29|parfait
-29|cashew
-29|scratch
-28|aka
-28|carson
-28|baklava
-28|texa
-28|bubble
-28|edge
-28|margaritum
-28|fillet
-28|chilaquile
-28|fettuccine
-28|mongolian
-28|chilli
-28|samosa
-28|dulce
-28|shack
-28|gourmet
-28|arepa
-28|paste
-28|apricot
-28|swirl
-27|reuben
-27|meatloaf
-27|shishito
-27|pick
-27|soi
-27|pomodoro
-27|cottum
-27|lavender
-27|nance
-27|layered
-27|condensed
-27|grape
-27|winter
-26|christma
-26|jambalaya
-26|chilled
-26|catfish
-26|khao
-26|spam
-26|sunny
-26|linguine
-26|toseeroll
-26|panna
-26|spanish
-26|chick
-26|heat
-26|amuse
-25|yaki
-25|melted
-25|yam
-25|bear
-25|cappuccino
-25|savoy
-25|champagne
-25|leafe
-25|cured
-25|fired
-25|potsticker
-25|okonomiyaki
-25|pomegranate
-25|breaded
-25|lofe
-25|valley
-25|taiwanese
-24|dill
-24|savory
-24|hazlenut
-24|skirt
-24|steam
-24|cotton
-24|galbi
-24|sizzling
-24|crudo
-24|bay
-24|took
-24|chilean
-24|branzino
-24|guava
-24|iberico
-24|lemongrass
-23|butternut
-23|portobello
-23|parm
-23|quiche
-23|pimento
-23|compote
-23|yolk
-23|unique
-23|tortum
-23|lox
-23|pokebar
-23|base
-23|instead
-23|chai
-23|biryani
-23|creamed
-23|jasmine
-22|chimichanga
-22|torte
-22|indian
-22|garbanzo
-22|boston
-22|gorgonzola
-22|schnitzel
-22|chashu
-22|seabass
-22|pure
-22|charcoal
-22|acai
-22|boiled
-22|granola
-22|glass
-22|provolone
-21|kong
-21|grapefruit
-21|road
-21|souffle
-21|broiled
-21|broccolini
-21|harvest
-21|crema
-21|icecream
-21|vodka
-21|pappardelle
-21|district
-20|souvlaki
-20|hong
-20|room
-20|fajitum
-20|cha
-20|couscou
-20|parmigiana
-20|hojicha
-20|antipasto
-20|hamburger
-20|clean
-20|vinegar
-20|sun
-20|soggy
-20|horseradish
-20|mild
-19|arancini
-19|tropical
-19|flour
-19|clockwise
-19|adobo
-19|pancettum
-19|chestnut
-19|chocolat
-19|py
-19|santum
-19|make
-19|ketchup
-19|ocean
-19|graham
-19|butterscotch
-18|generou
-18|bland
-18|cocoa
-18|affogato
-18|breadstick
-18|animal
-18|thyme
-18|cereal
-18|blossom
-18|kaftum
-18|drizzled
-17|daikon
-17|fiestum
-17|buttercream
-17|salami
-17|celery
-17|macadamium
-17|andy
-16|nori
-16|focaccium
-16|ganache
-16|bonitum
-16|blood
-16|loui
-16|kurobutum
-15|dusted
-15|porchettum
-15|ciabattum
-15|calory
-15|orchid
-15|winterliciou
-15|caribbean
-14|taquito
-14|hollandaise
-14|true
-14|bang
-14|goody
-13|tilapium
-13|take
-13|chimichurri
-13|say
-13|horchatum
-12|frittatum
-12|lumpium
-12|applewood
-12|sandwhich
-12|pico
-11|aji
-11|crafthau
-11|patata
-11|andouille
-10|angry
-10|antipasti
-10|browny
-10|elvi
-10|alcohol
-10|riblet
-10|tostone
-10|fabulou
-10|sangrium
-10|scrumptiou
-10|smoothy
-10|hushpuppy
-9|minu
-9|flauta
-9|reservation
-9|jone
-9|pasta
-9|osterium
-9|agnolotti
-9|anago
-8|spanakopitum
-8|mignardise
-8|sapien
-8|butum
-8|ajo
-8|chium
-8|sound
-8|blanco
-8|gremolatum
-7|scotium
-7|hibiscu
-7|gorgeou
-7|tib
-7|dolmade
-7|shaving
-7|condiment
-7|get
-7|profiterole
-7|indium
-7|pierogy
-7|haupium
-7|banger
-6|trifectum
-6|fungu
-6|sport
-6|margarita
-6|cochinitum
-6|veganbite
-6|dalla
-6|worker
-6|koftum
-6|romaine
-6|rind
-6|wan
-6|salsiccium
-6|na
-6|do
-6|burattum
-6|parmigianium
-6|cactu
-6|gamba
-6|alligator
-6|nan
-5|marisco
-5|daz
-5|couli
-5|birrium
-5|foody
-5|lasvega
-5|robatum
-5|torta
-5|piccatum
-5|cassi
-5|top
-5|perogy
-5|pita
-5|alba
-4|albertum
-4|goldilock
-4|abalone
-4|griglium
-4|piccattum
-4|plantum
-4|skinnyfat
-4|ridiculou
-4|tentacle
-4|mium
-4|oasi
-4|oop
-4|fritum
-4|gloriou
-4|keep
-4|molass
-4|orlean
-4|tatsutum
-4|humu
-4|marium
-4|jesu
-4|in
-4|element
-4|delicou
-4|preserf
-4|sincitycupcake
-4|clafouti
-4|nutritiou
-4|kalamatum
-4|aburiciou
-4|crevette
-4|agave
-4|alfajore
-4|georgium
-4|infamou
-4|chri
-4|bangu
-4|maduro
-4|fantasium
-4|serf
-3|achiote
-3|glutinou
-3|salatum
-3|go
-3|goman
-3|banyul
-3|knight
-3|frijole
-3|circu
-3|keftum
-2|gim
-2|me
-2|insalatum
-2|false
+Count	word
+380	cheese
+379	salad
+330	fried
+317	sandwich
+314	roll
+292	beef
+283	pork
+276	meal
+270	fry
+264	shrimp
+249	extra
+245	burger
+234	chocolate
+230	grilled
+227	cream
+227	rice
+221	cake
+218	spicy
+215	taco
+212	salmon
+208	pizza
+202	breakfast
+191	egg
+184	deliciou
+181	crispy
+174	bowl
+172	fresh
+168	sauce
+159	ice
+156	dessert
+156	steak
+152	potato
+144	noodle
+140	soup
+134	sweet
+131	bacon
+131	special
+130	plate
+119	sushi
+118	crab
+118	rib
+117	fish
+114	strawberry
+112	wing
+112	lobster
+110	onion
+110	bbq
+109	food
+105	double
+103	bread
+101	garlic
+101	waffle
+100	combo
+98	chip
+96	meat
+95	avocado
+95	mushroom
+95	pancake
+95	toast
+94	pie
+90	tuna
+90	hot
+89	red
+89	curry
+88	black
+87	lunch
+87	butter
+86	apple
+85	lamb
+85	french
+85	tea
+85	yummy
+84	cheeseburger
+83	pastum
+80	cookie
+80	banana
+79	roasted
+79	buttermilk
+77	nacho
+77	duck
+76	thai
+74	seafood
+73	mango
+73	house
+72	white
+71	bean
+71	burrito
+70	bun
+70	platter
+69	baked
+68	scallop
+67	side
+67	classic
+66	quarter
+65	dinner
+65	crepe
+64	vegetable
+64	pounder
+64	tofu
+64	wrap
+63	cheesecake
+63	vegan
+63	lemon
+63	style
+63	fruit
+63	smoked
+62	snack
+61	belly
+60	sausage
+60	raman
+59	tempura
+59	turkey
+59	almond
+58	caramel
+57	flavor
+57	sashimi
+57	pepper
+57	vanilla
+55	half
+55	veggie
+54	matcha
+54	cinnamon
+53	tomato
+53	artisan
+53	pad
+53	soft
+53	brunch
+52	order
+52	big
+52	dumpling
+50	honey
+49	croissant
+49	endoedible
+49	chili
+49	appetizer
+49	love
+48	dish
+47	chef
+47	coconut
+47	free
+46	spinach
+45	teriyaki
+45	benedict
+45	cupcake
+44	italian
+44	sesame
+44	raspberry
+44	served
+43	meatball
+43	cooky
+43	donut
+42	peanut
+42	tasty
+42	cheddar
+41	brisket
+41	bone
+41	small
+40	stuffed
+40	shawarma
+40	truffle
+40	octopus
+40	corn
+39	hummu
+38	homemade
+38	mini
+38	short
+38	coffee
+37	poutine
+37	poke
+37	blueberry
+36	large
+36	katsu
+36	chop
+36	box
+35	dog
+35	milk
+35	vega
+34	nigiri
+34	tart
+34	miso
+34	pan
+34	little
+34	asada
+34	calamari
+33	ball
+33	vegetarian
+33	filet
+33	topping
+32	seared
+32	greek
+32	spaghetti
+32	drink
+31	happy
+31	korean
+31	pulled
+31	perfect
+31	sea
+30	risotto
+30	nutella
+30	chorizo
+30	carne
+30	cauliflower
+30	brownie
+30	chipotle
+30	skewer
+30	clam
+29	sugar
+29	super
+29	cold
+29	quesadilla
+29	salsa
+28	bite
+28	beer
+28	berry
+28	kimchi
+28	ceviche
+28	gelato
+28	spice
+28	braised
+28	portion
+28	bagel
+28	mixed
+28	orange
+27	home
+27	blue
+27	pesto
+27	tiramisu
+27	brussel
+27	macaron
+27	ribeye
+27	crunch
+26	slouse
+26	falafel
+26	cup
+26	traditional
+26	brown
+26	dragon
+26	basil
+26	caesar
+26	sticky
+25	latte
+25	doughnut
+25	seasonal
+25	pepperoni
+25	juicy
+25	grill
+25	pistachio
+25	goat
+25	lime
+25	sour
+25	famou
+25	pastry
+24	fire
+24	carrot
+24	mexican
+24	aioli
+24	snow
+24	cocktail
+24	gluten
+24	creamy
+24	japanese
+24	leg
+24	sunday
+24	pink
+24	piece
+23	strip
+23	mozzarella
+23	muffin
+23	omelette
+23	takoyaki
+23	filling
+23	salted
+23	hash
+22	cannoli
+22	squash
+22	masala
+22	sundae
+22	asian
+22	complimentary
+22	steamed
+22	sampler
+21	cod
+21	scone
+21	parmesan
+21	dry
+21	kabob
+21	gyoza
+21	tartare
+21	old
+21	pineapple
+21	slaw
+21	ordered
+21	pumpkin
+20	beet
+20	medium
+20	mediterranean
+20	pudding
+20	pitum
+20	street
+20	lettuce
+20	ham
+20	prosciutto
+20	cucumber
+20	kale
+20	californium
+20	maple
+20	mix
+20	bento
+20	nut
+20	pretzel
+2	wan
+2	na
