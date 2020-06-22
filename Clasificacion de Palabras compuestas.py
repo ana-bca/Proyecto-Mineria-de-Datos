@@ -13,11 +13,12 @@ from keras.preprocessing.sequence import pad_sequences
 from keras.models import Sequential
 from keras import layers
 from sklearn.utils import shuffle
+import numpy as np
 #======================== Clasificador de bigramas ===========================#
 vocabul = pd.read_csv('palabras_finales.csv', engine='python',sep="|")
 # Vectores en los bigramas
 data = pd.read_csv('palabrascompu2.csv',sep=",")
-data = pd.read_csv('prueba1.csv',sep=",")
+#data = pd.read_csv('prueba1.csv',sep=",")
 data_A = shuffle(data)
 data_v = data[data_A.index< int(data_A.shape[0]*0.10)]
 data = data_A[data_A.index >= int(data_A.shape[0]*0.10)]
@@ -75,7 +76,7 @@ axs[1].legend()
 data_C = pd.read_csv('palabrascompu.csv',sep=",")
 data_C = data_A.append(data_C)
 data_C.drop_duplicates(subset ="compuesta", keep = False, inplace = True) 
-data_C = data_C.sample(500)
+data_C = data_C
 
 y_C = data_C['Clase'].values
 X_C = tokenizer.texts_to_sequences(data_C.compuesta.values)
