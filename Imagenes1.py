@@ -7,6 +7,7 @@ import tqdm
 from sklearn.model_selection import train_test_split
 from sklearn.utils import shuffle
 from keras.preprocessing.image import ImageDataGenerator
+from skimage.transform import rescale, resize, downscale_local_mean
 import nltk
 from nltk.util import ngrams
 from spacy.lang.en import English
@@ -57,17 +58,17 @@ data_test.to_csv(csv_test , index=False,sep="\t")
 data_valid.to_csv(csv_valid , index=False,sep="\t")
 # Creamos los directorios para las imagenes
 for i in tqdm.tqdm(data_test.photo_id.values):
-    Imagen = io.imread('photos/' + i)
-    image_resized = resize(Imagen, (400,500),anti_aliasing=True)
+    Imagen = io.imread('/home/andrey/Descargas/yelp_photos (1)/photos/' + i)
+    image_resized = resize(Imagen, (200,250),anti_aliasing=True)
     local = 'Imagenes/test/' + i
     io.imsave(local,image_resized)
 for i in tqdm.tqdm(data_train.photo_id.values):
-    Imagen = io.imread('photos/' + i)
+    Imagen = io.imread('/home/andrey/Descargas/yelp_photos (1)/photos' + i)
     image_resized = resize(Imagen, (400,500),anti_aliasing=True)
     local = 'Imagenes/train/' + i
     io.imsave(local,image_resized)
 for i in tqdm.tqdm(data_valid.photo_id.values):
-    Imagen = io.imread('photos/' + i)
+    Imagen = io.imread('/home/andrey/Descargas/yelp_photos (1)/photos' + i)
     image_resized = resize(Imagen, (400,500),anti_aliasing=True)
     local = 'Imagenes/valid/' + i
     io.imsave(local,image_resized)

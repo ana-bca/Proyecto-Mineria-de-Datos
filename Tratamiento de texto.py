@@ -94,8 +94,8 @@ pd.crosstab(data_photo_F.len_word, columns='count').plot.bar()
 plt.title("Cantidad de palabras por comentario")
 plt.show()
 data_photo_F = data_photo_F[data_photo_F.len_word != 0]
-data_photo_F = data_photo_F[data_photo_F.len_word < 8]
-data_photo_F = data_photo_F.sample(10000) # Muestra de los datos
+data_photo_F = data_photo_F[data_photo_F.len_word < 4]
+data_photo_F = data_photo_F.sample(5000) # Muestra de los datos
 csv_datos_finales = "data_photo_F.csv"
 data_photo_F.to_csv(csv_datos_finales , index=False,sep="\t")
 pd.crosstab(data_photo_F.len_word, columns='count').plot.bar()
@@ -112,7 +112,7 @@ table_n1.word = [val for sublist in table_n1.word for val in sublist]
 csv_name = "palabras_finales.csv"
 table_n1.to_csv(csv_name, index=False,sep="\t")
 # Cortamos para frecuencias en las palabras mayores a 10 =====================#
-DIC3 = np.array(table_n1.word[table_n1.Count < 20])
+DIC3 = np.array(table_n1.word[table_n1.Count < 500])
 data_photo_F=data_photo_F.assign(caption=
                                data_photo_F.caption.map(lambda p: texClean3(str(p),DIC3)))
 #csv_datos_finales = "palabras3.csv"
@@ -131,7 +131,7 @@ palabrascompu = pd.DataFrame({'palabra1':palabra1,'palabra2':palabra2,
 csv_datos_finales = "Bigramas_finales.csv"
 palabrascompu.to_csv(csv_datos_finales, index=False,sep="\t")
 # Nube de palabras ===========================================================#
-wordcloud = WordCloud(max_words=450,
+wordcloud = WordCloud(max_words=50,
                       background_color="white").generate(data_photo_F.caption.sum())
 plt.imshow(wordcloud)
 plt.axis("off")
